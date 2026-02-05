@@ -53,6 +53,8 @@ body {
     height: 12px;
     border-radius: 50%;
     display: inline-block;
+    position: relative;
+    transition: all 0.2s ease;
 }
 
 .btn.red {
@@ -65,6 +67,60 @@ body {
 
 .btn.green {
     background: #27c93f;
+}
+
+/* Windows mode button styling */
+body.windows-mode .btn {
+    width: 14px;
+    height: 14px;
+    border-radius: 0;
+    background: transparent;
+    border: 1px solid #6e7681;
+}
+
+body.windows-mode .btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #c9d1d9;
+    font-size: 10px;
+    line-height: 1;
+}
+
+/* Windows minimize button (—) */
+body.windows-mode .btn.yellow::after {
+    content: '−';
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Windows maximize button (□) */
+body.windows-mode .btn.green::after {
+    content: '□';
+    font-size: 9px;
+}
+
+/* Windows close button (×) */
+body.windows-mode .btn.red {
+    background: transparent;
+}
+
+body.windows-mode .btn.red::after {
+    content: '×';
+    font-size: 14px;
+    font-weight: bold;
+}
+
+body.windows-mode .btn.red:hover {
+    background: #e81123;
+    border-color: #e81123;
+}
+
+body.windows-mode .btn.yellow:hover,
+body.windows-mode .btn.green:hover {
+    background: rgba(110, 118, 129, 0.2);
 }
 
 .terminal-title {
