@@ -1,5 +1,69 @@
+// OS Mode Management
+function initOSMode() {
+    // Load saved preference or default to Mac
+    const savedOS = localStorage.getItem('preferredOS') || 'mac';
+    setOSMode(savedOS, false);
+
+    // Add click handlers to OS toggle buttons
+    const osButtons = document.querySelectorAll('.os-btn');
+    osButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const os = this.getAttribute('data-os');
+            setOSMode(os, true);
+            localStorage.setItem('preferredOS', os);
+        });
+    });
+}
+
+function setOSMode(os, animate = true) {
+    // Update button states
+    document.querySelectorAll('.os-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-os') === os);
+    });
+
+    // Update body class
+    if (os === 'windows') {
+        document.body.classList.add('windows-mode');
+    } else {
+        document.body.classList.remove('windows-mode');
+    }
+
+    // Update all prompts and commands
+    const prompts = document.querySelectorAll('.prompt');
+    const commands = document.querySelectorAll('.command:not(.blink)');
+
+    prompts.forEach(prompt => {
+        const macText = prompt.getAttribute('data-mac');
+        const winText = prompt.getAttribute('data-win');
+        if (macText && winText) {
+            prompt.textContent = os === 'windows' ? winText : macText;
+        }
+    });
+
+    commands.forEach(command => {
+        const macText = command.getAttribute('data-mac');
+        const winText = command.getAttribute('data-win');
+        if (macText && winText) {
+            command.textContent = os === 'windows' ? winText : macText;
+        }
+    });
+
+    // Add transition effect if animating
+    if (animate) {
+        const terminalBody = document.querySelector('.terminal-body');
+        terminalBody.style.opacity = '0';
+        setTimeout(() => {
+            terminalBody.style.transition = 'opacity 0.3s ease';
+            terminalBody.style.opacity = '1';
+        }, 50);
+    }
+}
+
 // Terminal typing effect
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize OS mode
+    initOSMode();
+
     // Add smooth scroll behavior
     document.documentElement.style.scrollBehavior = 'smooth';
 

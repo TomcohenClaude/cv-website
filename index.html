@@ -9,19 +9,29 @@
 <body>
     <div class="terminal-container">
         <div class="terminal-header">
-            <div class="terminal-buttons">
-                <span class="btn red"></span>
-                <span class="btn yellow"></span>
-                <span class="btn green"></span>
+            <div class="header-left">
+                <div class="terminal-buttons">
+                    <span class="btn red"></span>
+                    <span class="btn yellow"></span>
+                    <span class="btn green"></span>
+                </div>
+                <div class="terminal-title">terminal — tom-cohen-cv</div>
             </div>
-            <div class="terminal-title">terminal — tom-cohen-cv</div>
+            <div class="os-toggle">
+                <button class="os-btn" data-os="mac" title="Mac Terminal">
+                    <span class="os-icon"></span> Mac
+                </button>
+                <button class="os-btn" data-os="windows" title="Windows Command Prompt">
+                    <span class="os-icon">⊞</span> Windows
+                </button>
+            </div>
         </div>
 
         <div class="terminal-body">
             <!-- Profile Section -->
             <div class="output-line">
-                <span class="prompt">visitor@cv:~$</span>
-                <span class="command">cat profile.txt</span>
+                <span class="prompt" data-mac="visitor@cv:~$" data-win="C:\Users\visitor>">visitor@cv:~$</span>
+                <span class="command" data-mac="cat profile.txt" data-win="type profile.txt">cat profile.txt</span>
             </div>
 
             <div class="section" id="profile">
@@ -42,8 +52,8 @@
 
             <!-- Summary Section -->
             <div class="output-line">
-                <span class="prompt">visitor@cv:~$</span>
-                <span class="command">cat summary.txt</span>
+                <span class="prompt" data-mac="visitor@cv:~$" data-win="C:\Users\visitor>">visitor@cv:~$</span>
+                <span class="command" data-mac="cat summary.txt" data-win="type summary.txt">cat summary.txt</span>
             </div>
 
             <div class="section" id="summary">
@@ -67,8 +77,8 @@
 
             <!-- Experience Section -->
             <div class="output-line">
-                <span class="prompt">visitor@cv:~$</span>
-                <span class="command">cat experience.txt</span>
+                <span class="prompt" data-mac="visitor@cv:~$" data-win="C:\Users\visitor>">visitor@cv:~$</span>
+                <span class="command" data-mac="cat experience.txt" data-win="type experience.txt">cat experience.txt</span>
             </div>
 
             <div class="section" id="experience">
@@ -137,8 +147,8 @@
 
             <!-- Skills Section -->
             <div class="output-line">
-                <span class="prompt">visitor@cv:~$</span>
-                <span class="command">cat skills.txt</span>
+                <span class="prompt" data-mac="visitor@cv:~$" data-win="C:\Users\visitor>">visitor@cv:~$</span>
+                <span class="command" data-mac="cat skills.txt" data-win="type skills.txt">cat skills.txt</span>
             </div>
 
             <div class="section" id="skills">
@@ -177,8 +187,8 @@
 
             <!-- Education Section -->
             <div class="output-line">
-                <span class="prompt">visitor@cv:~$</span>
-                <span class="command">cat education.txt</span>
+                <span class="prompt" data-mac="visitor@cv:~$" data-win="C:\Users\visitor>">visitor@cv:~$</span>
+                <span class="command" data-mac="cat education.txt" data-win="type education.txt">cat education.txt</span>
             </div>
 
             <div class="section" id="education">
@@ -209,8 +219,8 @@
 
             <!-- Certifications Section -->
             <div class="output-line">
-                <span class="prompt">visitor@cv:~$</span>
-                <span class="command">cat certifications.txt</span>
+                <span class="prompt" data-mac="visitor@cv:~$" data-win="C:\Users\visitor>">visitor@cv:~$</span>
+                <span class="command" data-mac="cat certifications.txt" data-win="type certifications.txt">cat certifications.txt</span>
             </div>
 
             <div class="section" id="certifications">
@@ -236,8 +246,8 @@
 
             <!-- Military Service Section -->
             <div class="output-line">
-                <span class="prompt">visitor@cv:~$</span>
-                <span class="command">cat military-service.txt</span>
+                <span class="prompt" data-mac="visitor@cv:~$" data-win="C:\Users\visitor>">visitor@cv:~$</span>
+                <span class="command" data-mac="cat military-service.txt" data-win="type military-service.txt">cat military-service.txt</span>
             </div>
 
             <div class="section" id="military">
@@ -263,8 +273,8 @@
 
             <!-- Languages Section -->
             <div class="output-line">
-                <span class="prompt">visitor@cv:~$</span>
-                <span class="command">cat languages.txt</span>
+                <span class="prompt" data-mac="visitor@cv:~$" data-win="C:\Users\visitor>">visitor@cv:~$</span>
+                <span class="command" data-mac="cat languages.txt" data-win="type languages.txt">cat languages.txt</span>
             </div>
 
             <div class="section" id="languages">
@@ -281,8 +291,8 @@
 
             <!-- Contact CTA Section -->
             <div class="output-line">
-                <span class="prompt">visitor@cv:~$</span>
-                <span class="command">cat lets-connect.txt</span>
+                <span class="prompt" data-mac="visitor@cv:~$" data-win="C:\Users\visitor>">visitor@cv:~$</span>
+                <span class="command" data-mac="cat lets-connect.txt" data-win="type lets-connect.txt">cat lets-connect.txt</span>
             </div>
 
             <div class="section" id="connect">
@@ -316,7 +326,7 @@
 
             <!-- Command Line Cursor -->
             <div class="output-line">
-                <span class="prompt">visitor@cv:~$</span>
+                <span class="prompt" data-mac="visitor@cv:~$" data-win="C:\Users\visitor>">visitor@cv:~$</span>
                 <span class="command blink">_</span>
             </div>
         </div>
