@@ -31,8 +31,18 @@ yarn-debug.log*
 .cache/
 temp/
 
-# Claude specific
-.claude/memory/
+# Claude specific - exclude entire directory with agent configs and tokens
+.claude/
+
+# Internal development docs
+AGENT_GUIDE.md
+QUICKSTART.md
+
+# Personal files
+*.pdf
+
+# Other development tools
+.qodo/
 
 # Backup files
 *.backup
