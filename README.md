@@ -1,4 +1,4 @@
-# CLI-Style CV Website for Solution Engineer
+# CLI-Style CV Website
 
 A modern, interactive CV website featuring a terminal/CLI aesthetic, designed to showcase technical expertise and professional experience in a visually engaging way.
 
@@ -91,8 +91,6 @@ This project utilizes specialized AI agents for different aspects of development
 - **Copywriter**: Professional content and messaging
 - **Designer**: Visual aesthetics and user experience
 
-See `.claude/agents/` directory for agent configurations.
-
 ## Deployment Options
 
 ### GitHub Pages
@@ -105,25 +103,6 @@ git remote add origin <your-repo-url>
 git push -u origin main
 ```
 Enable GitHub Pages in repository settings.
-
-### Netlify
-Drag and drop the project folder to Netlify's web interface.
-
-### Vercel
-```bash
-vercel deploy
-```
-
-## Future Enhancements
-
-- [ ] Add backend API for dynamic content
-- [ ] Implement contact form with email integration
-- [ ] Create blog section for technical articles
-- [ ] Add dark/light theme toggle
-- [ ] Integrate with LinkedIn API for automatic updates
-- [ ] Add analytics and visitor tracking
-- [ ] Create multi-language support
-- [ ] Add PDF download functionality
 
 ## Browser Compatibility
 
@@ -139,14 +118,11 @@ vercel deploy
 - SEO friendly: Semantic HTML structure
 - Accessible: WCAG 2.1 compliant markup
 
-## License
-
-MIT License - Feel free to use and modify for your own CV website.
 
 ## Contact
 
-For questions or suggestions about this project template, please open an issue.
+For questions or suggestions about this project template, ping me.
 
 ---
 
-**Built with** ❤️ **using Claude Code and AI Agent collaboration**
+**Built with** ❤️ **using Claude Code**
